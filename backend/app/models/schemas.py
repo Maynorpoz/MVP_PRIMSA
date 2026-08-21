@@ -16,7 +16,6 @@ class LoginRequest(BaseModel):
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
-    role: UserRoleEnum = UserRoleEnum.customer_role
 
 
 class UserOut(BaseModel):

@@ -10,6 +10,12 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
+    # Optional one-time bootstrap for the first sales_admin_role account, since
+    # /access/admins requires an existing admin token and can't create one.
+    # Leave unset in normal operation; only needed to seed the very first admin.
+    FIRST_ADMIN_EMAIL: str | None = None
+    FIRST_ADMIN_PASSWORD: str | None = None
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 

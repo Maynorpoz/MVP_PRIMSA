@@ -16,7 +16,10 @@ def process_order(db: Session, user: User, order_in: OrderCreate) -> Order:
         )
 
     product_ids = [item.product_id for item in order_in.items]
-    products = {p.id: p for p in product_repository.get_many_by_ids(db, product_ids)}
+    # Row-level lock: holds concurrent checkouts on the same product until this
+    # transaction commits, so simultaneous orders can't both read stale stock
+    # and oversell the same units.
+    products = {p.id: p for p in product_repository.get_many_by_ids_for_update(db, product_ids)}
 
     missing_ids = [pid for pid in product_ids if pid not in products]
     if missing_ids:
