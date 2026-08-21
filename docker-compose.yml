@@ -25,6 +25,9 @@ services:
       SECRET_KEY: change-this-secret-in-production
       ALGORITHM: HS256
       ACCESS_TOKEN_EXPIRE_MINUTES: 60
+      # Browser origin(s) allowed to call this API (comma-separated). Must
+      # include the frontend's own origin, not the backend's.
+      CORS_ORIGINS: http://localhost:5173
       # Optional: uncomment to seed the first sales_admin_role account on
       # startup (skipped if unset, or if that email already exists).
       # FIRST_ADMIN_EMAIL: admin@primsa.com
@@ -34,6 +37,20 @@ services:
     depends_on:
       postgres_db:
         condition: service_healthy
+
+  # Built per frontend/INSTRUCCIONES.md. Runtime config (API_BASE_URL) is
+  # injected at container start via infra/40-env-config.sh, not baked in at
+  # build time, so the same image works unmodified across environments.
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    environment:
+      API_BASE_URL: http://localhost:8000
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
 
   prometheus:
     image: prom/prometheus:v2.55.1

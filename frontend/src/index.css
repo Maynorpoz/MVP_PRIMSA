@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper-50 text-ink-950 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  /* Signature brand device from the design system: a single clipped corner,
+     used sparingly (primary CTAs, hero panels) — never on every card. */
+  .facet-cut {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+}

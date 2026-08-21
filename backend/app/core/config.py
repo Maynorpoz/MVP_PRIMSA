@@ -16,7 +16,18 @@ class Settings(BaseSettings):
     FIRST_ADMIN_EMAIL: str | None = None
     FIRST_ADMIN_PASSWORD: str | None = None
 
+    # Comma-separated list of origins allowed to call this API from a browser
+    # (e.g. the frontend's own origin). Required for the frontend to work at
+    # all: without CORS headers, the browser blocks every cross-origin
+    # request regardless of a valid JWT. Never use "*" together with
+    # allow_credentials in production.
+    CORS_ORIGINS: str = "http://localhost:5173"
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+
+    @property
+    def cors_origins_list(self) -> list[str]:
+        return [origin.strip() for origin in self.CORS_ORIGINS.split(",") if origin.strip()]
 
 
 settings = Settings()
