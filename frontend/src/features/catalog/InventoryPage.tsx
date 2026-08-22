@@ -63,8 +63,9 @@ export function InventoryPage() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M6 7h12l-1 13H7L6 7Z" />
-                <path d="M9 7V5a3 3 0 0 1 6 0v2" />
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
               {itemCount > 0 && (
                 <span className="absolute -right-1.5 -top-1.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-brand px-1 text-[11px] font-bold text-ink-950">

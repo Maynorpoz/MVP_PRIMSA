@@ -7,7 +7,7 @@ import type { ProductOut } from '@/types/catalog'
 function product(overrides: Partial<ProductOut> = {}): ProductOut {
   return {
     id: 1,
-    name: 'Camisa Primsa Classic',
+    name: 'Filtro de Aceite Primsa',
     description: null,
     price: '29.99',
     stock: 3,

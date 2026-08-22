@@ -37,7 +37,7 @@ export function RegisterPage() {
   return (
     <div className="flex min-h-screen bg-paper-50">
       <BrandPanel
-        headline="Tu clóset, mejor surtido."
+        headline="Tu garaje, mejor equipado."
         body="Crea tu cuenta para guardar tu carrito, revisar tus pedidos y comprar más rápido la próxima vez."
       />
 

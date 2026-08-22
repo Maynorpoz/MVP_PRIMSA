@@ -2,13 +2,13 @@ import { describe, expect, it } from 'vitest'
 import { findAffectedProductId } from './errorMapping'
 
 const cartItems = [
-  { productId: 1, name: 'Camisa Primsa Classic' },
-  { productId: 2, name: 'Pantalón Primsa Slim' },
+  { productId: 1, name: 'Filtro de Aceite Primsa' },
+  { productId: 2, name: 'Kit de Frenos Primsa' },
 ]
 
 describe('findAffectedProductId', () => {
   it('matches by product name (insufficient stock message)', () => {
-    const detail = "Insufficient stock for product 'Camisa Primsa Classic'"
+    const detail = "Insufficient stock for product 'Filtro de Aceite Primsa'"
     expect(findAffectedProductId(detail, cartItems)).toBe(1)
   })
 
