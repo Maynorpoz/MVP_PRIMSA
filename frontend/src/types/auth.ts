@@ -1,7 +1,7 @@
 /**
  * Mirrors backend/app/models/schemas.py (Auth section) and
  * backend/app/models/db_models.py::UserRoleEnum. Source of truth: see
- * INSTRUCCIONES.md section 4.
+ * ARQUITECTURA.md section 4.
  */
 
 export type UserRole = 'customer_role' | 'sales_admin_role'

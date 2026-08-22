@@ -7,7 +7,7 @@ export interface ProtectedRouteProps {
 }
 
 /**
- * Gate for a route subtree. Per INSTRUCCIONES.md section 7:
+ * Gate for a route subtree. Per ARQUITECTURA.md section 7:
  *   1. no session -> /login (remembers where the user was headed)
  *   2. session but wrong role -> /unauthorized, never a raw 403
  *   3. a real 401 from any request already logs the user out globally

@@ -13,7 +13,7 @@ interface CartContextValue {
   subtotal: number
   itemCount: number
   /** Adds `quantity` units, clamped to the product's known stock (UX only —
-   * the backend re-validates on checkout; see INSTRUCCIONES.md section 6). */
+   * the backend re-validates on checkout; see ARQUITECTURA.md section 6). */
   addItem: (product: ProductOut, quantity?: number) => void
   setQuantity: (productId: number, quantity: number) => void
   removeItem: (productId: number) => void

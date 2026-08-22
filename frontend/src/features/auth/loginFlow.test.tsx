@@ -6,7 +6,7 @@ import { AuthProvider } from './AuthContext'
 import { LoginPage } from './LoginPage'
 import * as authApi from '@/api/auth'
 
-// The api/ layer is mocked here per INSTRUCCIONES.md section 9 (phase 8):
+// The api/ layer is mocked here per ARQUITECTURA.md section 9 (phase 8):
 // the real contract was already verified live with curl against the running
 // backend (see section 4.1) — these tests cover the app's own logic
 // (redirect-by-role, error display) against that verified shape.

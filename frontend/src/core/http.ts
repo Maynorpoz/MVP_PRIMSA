@@ -25,7 +25,7 @@ httpClient.interceptors.request.use((requestConfig) => {
 })
 
 // Registered by AuthContext on mount. There is no refresh-token endpoint in
-// this backend (see INSTRUCCIONES.md section 4): a real 401 always means the
+// this backend (see ARQUITECTURA.md section 4): a real 401 always means the
 // session is no longer valid, so the only correct response is to clear it
 // and send the user back to login — never a silent retry.
 type UnauthorizedHandler = () => void

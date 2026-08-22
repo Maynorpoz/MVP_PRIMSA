@@ -24,7 +24,7 @@ export function RegisterPage() {
     setFormError(null)
     try {
       // The backend never accepts (or needs) a role here — every public
-      // registration is a customer_role account. See INSTRUCCIONES.md
+      // registration is a customer_role account. See ARQUITECTURA.md
       // section 4: adding a role field to this form would be rejected
       // server-side and must never be offered client-side either.
       await registerRequest({ email, password })

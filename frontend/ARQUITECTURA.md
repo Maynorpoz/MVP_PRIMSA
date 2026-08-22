@@ -1,4 +1,4 @@
-# Instrucciones de Desarrollo: Frontend MVP Primsa
+# Arquitectura Técnica: Frontend MVP Primsa
 
 ## 1. Contexto y Objetivos del Proyecto
 
@@ -294,7 +294,7 @@ siguiente (no dejar implementaciones a medias).
   `depends_on: backend`). No requiere cambios de infraestructura adicionales
   salvo que el puerto interno de nginx cambie.
 
-## 11. Instrucciones Adicionales para el Agente
+## 11. Notas Adicionales de Implementación
 
 - Antes de escribir código, confirma que el backend está corriendo
   (`docker compose up`) y prueba el contrato de la sección 4 con `curl` o el

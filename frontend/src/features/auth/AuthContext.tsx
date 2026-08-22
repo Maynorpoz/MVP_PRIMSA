@@ -6,7 +6,7 @@ import { decodeAccessToken } from '@/lib/jwt'
 import type { UserRole } from '@/types/auth'
 
 // sessionStorage (not localStorage): survives a page refresh but not a
-// closed tab, and is scoped to this origin — see INSTRUCCIONES.md section 8
+// closed tab, and is scoped to this origin — see ARQUITECTURA.md section 8
 // for the documented XSS trade-off of persisting a JWT in Web Storage at all.
 const SESSION_STORAGE_KEY = 'primsa.session.token'
 

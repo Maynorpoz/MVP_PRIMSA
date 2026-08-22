@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-// Brand tokens from the Fase 2 design pass (see INSTRUCCIONES.md section 5
+// Brand tokens from the Fase 2 design pass (see ARQUITECTURA.md section 5
 // and the published "Primsa Design System" canvas). These are transcribed
 // literally from the approved mockups, not improvised — colors are oklch(),
 // matching the design canvas exactly.

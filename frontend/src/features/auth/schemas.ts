@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 /**
  * Zod is UX only here — the backend re-validates and is the real authority
- * (see INSTRUCCIONES.md section 8). Neither schema has a `role` field: the
+ * (see ARQUITECTURA.md section 8). Neither schema has a `role` field: the
  * register form must never offer one (see section 4).
  */
 

@@ -1,6 +1,6 @@
 /**
  * The checkout error `detail` is a plain, backend-curated string (see
- * INSTRUCCIONES.md section 4.1) — never a structured `{product_id}` field.
+ * ARQUITECTURA.md section 4.1) — never a structured `{product_id}` field.
  * This best-effort matches it back to a cart line so the UI can point at
  * the specific product, per section 4's requirement that checkout errors
  * are shown in the cart's context, not as a generic toast.

@@ -30,7 +30,7 @@ export interface OrderOut {
 
 /**
  * Shape of a checkout 400/404 error's `detail`, as observed against the real
- * backend (see INSTRUCCIONES.md section 4.1):
+ * backend (see ARQUITECTURA.md section 4.1):
  *   - 400 "Insufficient stock for product '<name>'"
  *   - 400 "Invalid quantity for product <id>"
  *   - 400 "An order must contain at least one item"
