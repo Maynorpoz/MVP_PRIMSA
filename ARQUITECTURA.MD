@@ -1,4 +1,4 @@
-# Instrucciones de Desarrollo: Backend MVP Primsa
+# Arquitectura del Backend: MVP Primsa
 
 ## 1. Contexto y Objetivos del Proyecto
 Desarrollar el backend para un Producto Mínimo Viable (MVP) de la empresa "Primsa". El objetivo principal es automatizar las ventas mediante una plataforma web, mejorando la seguridad de los usuarios y proporcionando métricas de rendimiento del sistema (tiempos de respuesta y caídas).
@@ -38,6 +38,6 @@ El proyecto operará bajo un ecosistema de contenedores.
 *   **Dockerfile del Backend:** Crear un `Dockerfile` optimizado en la raíz del backend (usando una imagen base como `python:3.11-slim`), instalar dependencias vía `requirements.txt` y exponer el puerto correspondiente (ej. 8000) usando Uvicorn.
 *   **Integración en Compose:** El backend debe estar diseñado para ser invocado desde un `docker-compose.yml` externo, dependiendo explícitamente de un servicio `postgres_db` (garantizando que la BD levante antes que la API).
 
-## 6. Instrucciones Adicionales para el Agente
+## 6. Consideraciones de Implementación
 *   Proporcionar el código completo de los archivos clave (`main.py`, modelos, dependencias de seguridad y rutas).
 *   Manejar adecuadamente las excepciones HTTP (ej. 401 Unauthorized, 403 Forbidden, 404 Not Found) en la capa de servicios o routers.

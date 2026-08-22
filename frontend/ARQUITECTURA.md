@@ -3,7 +3,7 @@
 ## 1. Contexto y Objetivos del Proyecto
 
 Construir el frontend del MVP de "Primsa" que consume el backend ya implementado
-(`../backend`, FastAPI + PostgreSQL, ver `../INSTRUCCIONES.MD`). El objetivo es
+(`../backend`, FastAPI + PostgreSQL, ver `../ARQUITECTURA.MD`). El objetivo es
 ofrecer una experiencia web para dos roles de usuario — `customer_role` y
 `sales_admin_role` — que cubra el flujo completo de venta: autenticación,
 navegación de catálogo, checkout y panel de administración de órdenes.

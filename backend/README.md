@@ -1,7 +1,7 @@
 # Primsa MVP Backend
 
 FastAPI + PostgreSQL backend implementing domain-oriented routing, JWT role-based
-access control, and Prometheus/Grafana observability, per `INSTRUCCIONES.MD`.
+access control, and Prometheus/Grafana observability, per `ARQUITECTURA.MD`.
 
 ## Run (from the project root, alongside `docker-compose.yml`)
 

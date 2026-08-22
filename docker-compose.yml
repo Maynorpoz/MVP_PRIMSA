@@ -28,7 +28,7 @@ services:
       postgres_db:
         condition: service_healthy
 
-  # Built per frontend/INSTRUCCIONES.md. Runtime config (API_BASE_URL) is
+  # Built per frontend/ARQUITECTURA.md. Runtime config (API_BASE_URL) is
   # injected at container start via infra/40-env-config.sh, not baked in at
   # build time, so the same image works unmodified across environments.
   frontend:

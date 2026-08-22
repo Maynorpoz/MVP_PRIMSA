@@ -2,7 +2,7 @@
 
 MVP de venta en línea para "Primsa": catálogo, checkout y panel de
 administración de órdenes, con autenticación por rol y observabilidad
-integrada. Ver `INSTRUCCIONES.MD` (backend) y `frontend/INSTRUCCIONES.md`
+integrada. Ver `ARQUITECTURA.MD` (backend) y `frontend/ARQUITECTURA.md`
 (frontend) para el detalle completo de arquitectura, contrato de API y fases
 de desarrollo — este README es solo la puerta de entrada rápida al proyecto.
 
@@ -22,6 +22,17 @@ backend/       API FastAPI (routers/services/repositories/models/core)
 frontend/      SPA React (api/types/features/components/routes/lib/core)
 monitoring/    Configuración de Prometheus y dashboards de Grafana
 docker-compose.yml
+```
+
+## Arquitectura
+
+```mermaid
+flowchart LR
+    User(["Usuario"]) --> FE["Frontend<br/>React + Vite"]
+    FE -->|REST + JWT| BE["Backend<br/>FastAPI"]
+    BE --> DB[("PostgreSQL")]
+    BE -->|métricas| Prom["Prometheus"]
+    Prom --> Graf["Grafana"]
 ```
 
 ## Levantar todo el entorno
@@ -92,6 +103,6 @@ docker compose exec postgres_db psql -U primsa -d primsa -c \
 
 * Backend: ver `backend/README.md` (correr sin Docker, flujo típico de
   endpoints, notas de concurrencia en checkout).
-* Frontend: ver `frontend/README.md` y `frontend/INSTRUCCIONES.md` (scripts
+* Frontend: ver `frontend/README.md` y `frontend/ARQUITECTURA.md` (scripts
   de `npm`, sistema de diseño, contrato de API verificado contra el backend
   real, config runtime vía `window.__ENV__`).
