@@ -11,7 +11,7 @@ export function parseMoney(value: string): number {
 
 const formatter = new Intl.NumberFormat('es-GT', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'GTQ',
   minimumFractionDigits: 2,
 })
 
